@@ -1,0 +1,224 @@
+.header {
+  display: flex;
+  padding: 2.4rem;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(tab-land) {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    gap: 5rem;
+    align-items: normal;
+    padding-bottom: 6rem;
+  }
+
+  &__logo {
+    height: 2.4rem;
+  }
+
+  &__navigation {
+    display: none;
+
+    @include respond(tab-land) {
+      display: flex;
+      justify-content: space-between;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+
+      @include respond(tab-land) {
+        flex-direction: row;
+        gap: 2.4rem;
+      }
+    }
+
+    &-links {
+      &:link,
+      &:visited {
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: $medium-gray;
+        transition: all 0.3s;
+
+        @include respond(tab-land) {
+          font-size: 1.4rem;
+        }
+      }
+      &:hover,
+      &:active {
+        cursor: pointer;
+        color: $almost-black;
+      }
+    }
+
+    &-icon {
+      margin-left: 0.8rem;
+
+      &:hover {
+        cursor: pointer;
+        filter: invert(0%) sepia(0%) saturate(7476%) hue-rotate(100deg)
+          brightness(100%) contrast(105%);
+      }
+    }
+
+    &-icon-up--features,
+    &-icon-up--company {
+      display: none;
+    }
+
+    .show &-icon-up--features {
+      display: inline-block;
+    }
+    .show &-icon-down--features {
+      display: none;
+    }
+    .display &-icon-up--company {
+      display: inline-block;
+    }
+    .display &-icon-down--company {
+      display: none;
+    }
+  }
+
+  &__authentication {
+    display: flex;
+
+    @include respond(tab-land) {
+      gap: 1.8rem;
+    }
+
+    .register {
+      border: 0.2rem solid $medium-gray;
+      padding: 1.2rem 6.4rem;
+      border-radius: 1rem;
+      transition: all 0.3s;
+
+      &:hover,
+      &:active {
+        border-color: $almost-black;
+      }
+
+      @include respond(tab-land) {
+        padding: 1rem 1.6rem;
+        border-width: 0.1rem;
+        margin-top: -1rem;
+      }
+    }
+  }
+
+  &__open-menu {
+    height: 1.8rem;
+    @include respond(tab-port) {
+      height: 2.4rem;
+    }
+  }
+  &__close-menu {
+    height: 1.8rem;
+    display: none;
+    @include respond(tab-port) {
+      height: 2.4rem;
+    }
+  }
+
+  &__sub-menu {
+    display: none !important;
+    list-style: none;
+    flex-direction: column;
+    gap: 1.8rem;
+    padding-left: 3.2rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+
+      img {
+        width: 1.6rem;
+      }
+    }
+
+    &-links {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: $medium-gray;
+
+        @include respond(tab-land) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .show &__sub-menu--features,
+  .display &__sub-menu--company {
+    display: flex !important;
+    @include respond(tab-land) {
+      flex-direction: column;
+      gap: 1.6rem;
+      position: absolute;
+      box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+      border-radius: 1.2rem;
+      padding: 1.6rem 2.8rem;
+    }
+  }
+
+  .show &__sub-menu--features {
+    top: 5rem;
+    left: 11rem;
+  }
+
+  .display &__sub-menu--company {
+    top: 5rem;
+    left: 28rem;
+  }
+
+  // MOBILE NAVIGATION
+  .active &__navigation {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+    padding-left: 2.4rem;
+    gap: 3.2rem;
+    width: 65vw;
+    height: 150vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $almost-white;
+    z-index: 50;
+  }
+
+  .active &__menu-container {
+    z-index: 100;
+  }
+
+  .active &__authentication {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    padding-right: 2.4rem;
+
+    .register {
+      border: 0.1rem solid $medium-gray;
+      padding: 1rem 6.4rem;
+      border-radius: 1rem;
+    }
+  }
+  .active &__open-menu {
+    display: none;
+  }
+  .active &__close-menu {
+    display: block;
+  }
+
+  &__menu-container {
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+}

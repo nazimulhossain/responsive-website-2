@@ -1,0 +1,72 @@
+.hero {
+  display: grid;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.4rem;
+    padding-left: 6.4rem;
+    padding-right: 4.4rem;
+  }
+
+  @include respond(laptop) {
+    padding-right: 0;
+    gap: 9rem;
+  }
+
+  &__image {
+    height: 30rem;
+    background-image: url('./../images/image-hero-mobile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 3.2rem;
+
+    @include respond(phone) {
+      height: 40rem;
+    }
+    @include respond(tab-port) {
+      height: 58rem;
+    }
+
+    @include respond(tab-land) {
+      background-image: url('./../images/image-hero-desktop.png');
+      background-size: contain;
+      grid-column: 2;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 0 1.8rem;
+
+    @include respond(tab-land) {
+      grid-row: 1;
+      padding-top: 10rem;
+      gap: 4.4rem;
+      padding-left: 8rem;
+    }
+  }
+
+  &__clients {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.2rem 0 9rem 0;
+    @include respond(tab-land) {
+      margin-top: 6rem;
+    }
+    @include respond(laptop) {
+      margin-top: 5rem;
+    }
+    @include respond(big-desktop) {
+      margin-top: 3rem;
+    }
+    img {
+      width: 4.4rem;
+
+      @include respond(phone) {
+        width: 6.4rem;
+      }
+    }
+  }
+}

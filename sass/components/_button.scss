@@ -1,0 +1,35 @@
+.btn {
+  text-decoration: none;
+  align-self: center;
+
+  @include respond(tab-land) {
+    align-self: start;
+  }
+
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    padding: 1.6rem 2.4rem;
+    border-radius: 1.5rem;
+    font-weight: 700;
+    color: $almost-white;
+    background-color: $almost-black;
+    transform: all 0.3s;
+    @include respond(tab-port) {
+      font-size: 2rem;
+      padding: 2rem 3.6rem;
+    }
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+      padding: 1.2rem 2rem;
+      border-radius: 1rem;
+    }
+  }
+  &:hover,
+  &:active {
+    cursor: pointer;
+    color: $almost-black;
+    background-color: $almost-white;
+    border: 0.1rem solid $almost-black;
+  }
+}
