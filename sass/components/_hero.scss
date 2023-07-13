@@ -15,7 +15,7 @@
 
   &__image {
     height: 30rem;
-    background-image: url('./../images/image-hero-mobile.png');
+    background-image: url('./images/image-hero-mobile.png');
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 3.2rem;
@@ -28,7 +28,7 @@
     }
 
     @include respond(tab-land) {
-      background-image: url('./../images/image-hero-desktop.png');
+      background-image: url('./images/image-hero-desktop.png');
       background-size: contain;
       grid-column: 2;
     }

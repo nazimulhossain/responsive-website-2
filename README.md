@@ -12,8 +12,6 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
   - [Built with](#built-with)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -30,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://nazimulhossain.github.io/responsive-website-with-dropdown-navigation/](https://nazimulhossain.github.io/responsive-website-with-dropdown-navigation/)
+- Solution URL: [https://github.com/nazimulhossain/responsive-website-with-dropdown-navigation](https://github.com/nazimulhossain/responsive-website-with-dropdown-navigation)
 
 ## My process
 
@@ -43,6 +41,7 @@ Users should be able to:
 - CSS Grid
 - SASS
 - Mobile-first workflow
+- Mobile Navigation
 
 ## Author
 
