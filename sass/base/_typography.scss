@@ -4,51 +4,57 @@ body {
 }
 
 .heading-primary {
-  font-size: 3.2rem;
+  font-size: 3.6rem;
   color: $almost-black;
+  text-align: center;
 
   @include respond(phone) {
-    font-size: 4.8rem;
-  }
-
-  @include respond(tab-port) {
-    font-size: 7rem;
-  }
-  @include respond(tab-land) {
     font-size: 4.9rem;
   }
 
+  @include respond(tab-port) {
+    font-size: 7.5rem;
+  }
+  @include respond(tab-land) {
+    text-align: left;
+    font-size: 5.8rem;
+  }
+
   @include respond(laptop) {
-    font-size: 6.3rem;
+    font-size: 7rem;
   }
   @include respond(big-desktop) {
-    font-size: 7.5rem;
+    font-size: 8rem;
   }
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: $medium-gray;
   line-height: 1.6;
   font-weight: 400;
+  padding: 0 1.5rem;
+  text-align: center;
 
   @include respond(phone) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   @include respond(tab-port) {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
   }
 
   @include respond(tab-land) {
+    text-align: left;
     font-size: 1.3rem;
+    padding: 0;
   }
 
   @include respond(laptop) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   @include respond(big-desktop) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }

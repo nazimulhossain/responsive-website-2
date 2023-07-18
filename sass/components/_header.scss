@@ -9,7 +9,7 @@
     grid-template-columns: 0.1fr 1fr;
     gap: 5rem;
     align-items: normal;
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
   }
 
   &__logo {
@@ -186,7 +186,7 @@
     gap: 3.2rem;
     width: 65vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color: $almost-white;

@@ -1,71 +1,66 @@
 .hero {
   display: grid;
+  padding-bottom: 6.4rem;
 
   @include respond(tab-land) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 4.4rem;
+    gap: 8rem;
     padding-left: 6.4rem;
     padding-right: 4.4rem;
   }
 
   @include respond(laptop) {
-    padding-right: 0;
-    gap: 9rem;
+    gap: 10rem;
+    padding-left: 7.4rem;
   }
 
   &__image {
-    height: 30rem;
-    background-image: url('./images/image-hero-mobile.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 3.2rem;
-
-    @include respond(phone) {
-      height: 40rem;
-    }
-    @include respond(tab-port) {
-      height: 58rem;
-    }
-
-    @include respond(tab-land) {
-      background-image: url('./images/image-hero-desktop.png');
-      background-size: contain;
-      grid-column: 2;
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   &__text {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
-    padding: 0 1.8rem;
+    padding: 0 1.2rem;
+    margin-top: 4.4rem;
 
     @include respond(tab-land) {
       grid-row: 1;
-      padding-top: 10rem;
+      padding-top: 3rem;
       gap: 4.4rem;
-      padding-left: 8rem;
+      padding-left: 6.4rem;
     }
   }
 
   &__clients {
     display: flex;
     justify-content: space-between;
-    padding: 3.2rem 0 9rem 0;
+    margin-top: 4.4rem;
     @include respond(tab-land) {
-      margin-top: 6rem;
-    }
-    @include respond(laptop) {
-      margin-top: 5rem;
-    }
-    @include respond(big-desktop) {
-      margin-top: 3rem;
+      margin-top: auto;
+      gap: 2.4rem;
     }
     img {
-      width: 4.4rem;
+      height: 1.5rem;
 
       @include respond(phone) {
-        width: 6.4rem;
+        height: 2.4rem;
+      }
+
+      @include respond(tab-port) {
+        height: 3rem;
+      }
+      @include respond(tab-land) {
+        height: 2rem;
+      }
+      @include respond(laptop) {
+        height: 2.5rem;
+      }
+      @include respond(big-desktop) {
+        height: 3rem;
       }
     }
   }
